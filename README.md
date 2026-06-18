@@ -62,7 +62,74 @@ https://nodejs.org — choose the LTS version).
 
 ---
 
-## Want a custom domain instead of the generated link?
+## Setting up GitHub + Vercel (so future updates auto-deploy)
+
+This is a one-time setup. After this, any time the code changes and
+gets pushed to GitHub, your live site updates automatically — no
+manual re-uploading ever again.
+
+### Step 1: Create a GitHub account (free)
+
+Go to https://github.com and sign up if you don't have an account
+already.
+
+### Step 2: Create a new repository
+
+1. Click the **+** icon top-right -> **"New repository"**.
+2. Name it something like `paulines-herb-soup-guide`.
+3. Keep it **Public** or **Private** — either works fine with Vercel's
+   free tier. Private is a reasonable choice if you'd rather not have
+   it publicly browsable on GitHub (the live site itself can still be
+   shared with anyone via the link, regardless of this setting).
+4. Don't tick "Add a README" (this project already has one) — just
+   click **Create repository**.
+
+### Step 3: Push this project to GitHub
+
+This project folder already has Git set up and an initial commit
+ready to go (you'll see this if you open a terminal inside the
+folder and run `git log`). On the new repository page GitHub shows a
+section titled **"...or push an existing repository from the command
+line"** — copy those few lines and run them inside this project
+folder. They'll look like:
+
+```
+git remote add origin https://github.com/YOUR-USERNAME/paulines-herb-soup-guide.git
+git branch -M main
+git push -u origin main
+```
+
+GitHub will prompt you to log in the first time — follow its
+on-screen instructions (it may open a browser window to confirm).
+
+### Step 4: Connect Vercel to that GitHub repo
+
+1. Go to https://vercel.com and log in (or sign up free).
+2. Click **"Add New... -> Project"**.
+3. Choose **"Import Git Repository"** and authorize Vercel to access
+   your GitHub account when prompted.
+4. Select the `paulines-herb-soup-guide` repository from the list.
+5. Vercel auto-detects the Vite settings — just click **Deploy**.
+6. You'll get your live link, same as before.
+
+### From now on
+
+Whenever you want a change made (e.g. "add a new herb"), just bring
+it to this chat. I'll edit the file and give you the updated code —
+you replace the file in your local project folder, then run:
+
+```
+git add -A
+git commit -m "Update herb guide"
+git push
+```
+
+Vercel will detect the push and redeploy automatically within
+about a minute, with no further clicking needed.
+
+---
+
+
 
 The free `*.vercel.app` or `*.netlify.app` link works perfectly for
 sharing with friends and family — no extra cost.
