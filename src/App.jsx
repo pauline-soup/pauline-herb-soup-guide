@@ -1,4 +1,21 @@
 import { useState } from "react";
+import codonopsisPhoto from "./assets/codonopsis.jpg";
+import wolfberryPhoto from "./assets/wolfberry.jpg";
+import reddatesPhoto from "./assets/reddates.jpg";
+
+// Renders a real photo if provided, otherwise falls back to the illustrated icon
+const HerbVisual = ({ photo, iconType, size = 48, rounded = "10px" }) => {
+  if (photo) {
+    return (
+      <img
+        src={photo}
+        alt=""
+        style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: rounded, display: "block" }}
+      />
+    );
+  }
+  return <HerbIcon type={iconType} size={size} />;
+};
 
 // Hand-drawn style SVG illustrations representing each herb's real appearance
 const HerbIcon = ({ type, size = 48 }) => {
@@ -89,6 +106,16 @@ const HerbIcon = ({ type, size = 48 }) => {
         <path d="M35 38 Q50 45 65 38 M32 50 Q50 56 68 50 M35 62 Q50 56 65 62" fill="none" stroke="#A8895A" strokeWidth="0.8" opacity="0.6" />
       </svg>
     ),
+    ginseng: (
+      <svg viewBox="0 0 100 100" width={size} height={size}>
+        <path d="M50 12 Q56 30 53 45 Q58 55 50 60 Q42 55 47 45 Q44 30 50 12" fill="#E8D9B8" stroke="#B89860" strokeWidth="1.5" />
+        <path d="M50 60 Q44 70 36 78" fill="none" stroke="#B89860" strokeWidth="3" strokeLinecap="round" />
+        <path d="M50 60 Q56 70 64 78" fill="none" stroke="#B89860" strokeWidth="3" strokeLinecap="round" />
+        <path d="M50 60 Q48 72 46 85" fill="none" stroke="#B89860" strokeWidth="3" strokeLinecap="round" />
+        <path d="M50 60 Q52 72 54 85" fill="none" stroke="#B89860" strokeWidth="3" strokeLinecap="round" />
+        <path d="M50 18 Q53 30 51 42" fill="none" stroke="#A8895A" strokeWidth="0.8" opacity="0.6" />
+      </svg>
+    ),
     sishen: (
       <svg viewBox="0 0 100 100" width={size} height={size}>
         <ellipse cx="50" cy="65" rx="38" ry="22" fill="#F0E4D0" stroke="#C9B896" strokeWidth="1.5" />
@@ -156,6 +183,7 @@ const herbs = [
     flavour: "Sweet",
     nature: "Neutral",
     iconType: "codonopsis",
+    photo: codonopsisPhoto,
     color: "#B8860B"
   },
   {
@@ -169,6 +197,7 @@ const herbs = [
     flavour: "Sweet",
     nature: "Neutral",
     iconType: "wolfberry",
+    photo: wolfberryPhoto,
     color: "#CC3300"
   },
   {
@@ -182,6 +211,7 @@ const herbs = [
     flavour: "Sweet",
     nature: "Warm",
     iconType: "reddates",
+    photo: reddatesPhoto,
     color: "#8B1A1A"
   },
   {
@@ -261,6 +291,19 @@ const herbs = [
     nature: "Warm",
     iconType: "lovage",
     color: "#8B6914"
+  },
+  {
+    id: 11,
+    chineseName: "花旗参",
+    name: "Canada Ginseng (American Ginseng)",
+    pinyinName: "Huā Qí Shēn",
+    category: "Qi & Yin-Tonifying",
+    benefits: ["Boosts energy without overheating the body", "Nourishes yin & clears deficiency heat", "Relieves dry mouth & throat", "Calms restlessness & supports sleep", "Aids recovery after illness or stress"],
+    risks: ["Avoid during fever, cold or active infection", "May lower blood sugar – monitor if diabetic or on medication", "Avoid combining with caffeine or stimulants", "Consult a doctor if on blood thinners"],
+    flavour: "Bitter, then sweet",
+    nature: "Cooling",
+    iconType: "ginseng",
+    color: "#C9A876"
   },
 ];
 
@@ -462,7 +505,16 @@ export default function App() {
                   boxShadow: "0 2px 8px rgba(44,24,16,0.06)"
                 }}
               >
-                <div style={{ display: "flex", justifyContent: "center", marginBottom: "0.4rem", background: "#FAF7F2", borderRadius: "10px", padding: "0.4rem" }}><HerbIcon type={herb.iconType} size={48} /></div>
+                <div style={{
+                  display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "0.4rem",
+                  background: herb.photo ? "transparent" : "#FAF7F2",
+                  borderRadius: "10px",
+                  padding: herb.photo ? "0" : "0.4rem",
+                  height: herb.photo ? "120px" : "auto",
+                  overflow: "hidden"
+                }}>
+                  <HerbVisual photo={herb.photo} iconType={herb.iconType} size={48} />
+                </div>
                 <div style={{ fontSize: "0.7rem", color: "white", background: categoryColors[herb.category] || "#8B6914", borderRadius: "10px", padding: "0.15rem 0.5rem", display: "inline-block", marginBottom: "0.4rem" }}>
                   {herb.category}
                 </div>
@@ -548,7 +600,14 @@ export default function App() {
             onClick={e => e.stopPropagation()}
           >
             <div style={{ textAlign: "center", marginBottom: "1rem" }}>
-              <div style={{ display: "flex", justifyContent: "center", marginBottom: "0.4rem" }}><HerbIcon type={selectedHerb.iconType} size={80} /></div>
+              <div style={{
+                display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "0.6rem",
+                height: selectedHerb.photo ? "200px" : "auto",
+                borderRadius: "14px",
+                overflow: "hidden"
+              }}>
+                <HerbVisual photo={selectedHerb.photo} iconType={selectedHerb.iconType} size={80} rounded="14px" />
+              </div>
               <div style={{ fontWeight: "bold", fontSize: "1.3rem", color: "#2C1810" }}>{selectedHerb.name}</div>
               <div style={{ color: "#8B6914", fontSize: "1rem" }}>{selectedHerb.chineseName} · {selectedHerb.pinyinName}</div>
               <div style={{ display: "flex", justifyContent: "center", gap: "0.5rem", marginTop: "0.5rem" }}>
