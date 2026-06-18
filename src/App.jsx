@@ -1,7 +1,7 @@
-import { useState } from "react";
+    import { useState } from "react";
 import codonopsisPhoto from "./assets/codonopsis.jpg";
-import wolfberryPhoto from "./assets/wolfberry.jpg";
-import reddatesPhoto from "./assets/reddates.jpg";
+import wolfberryPhoto from "./assets/Go Qi.jpeg";
+import reddatesPhoto from "./assets/Hong Zao.jpeg";
 
 // Renders a real photo if provided, otherwise falls back to the illustrated icon
 const HerbVisual = ({ photo, iconType, size = 48, rounded = "10px" }) => {
@@ -709,3 +709,5 @@ export default function App() {
     </div>
   );
 }
+
+    
