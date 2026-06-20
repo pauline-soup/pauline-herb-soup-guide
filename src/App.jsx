@@ -10,7 +10,7 @@ const HerbVisual = ({ photo, iconType, size = 48, rounded = "10px" }) => {
       <img
         src={photo}
         alt=""
-        style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: rounded, display: "block" }}
+        style={{ width: "100%", height: "100%", objectFit: contain", borderRadius: rounded, display: "block" }}
       />
     );
   }
