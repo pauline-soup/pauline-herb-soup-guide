@@ -466,7 +466,7 @@ export default function App() {
         <div style={{ padding: "1.25rem" }}>
           {/* Filter */}
           <div style={{ marginBottom: "1.25rem" }}>
-            <div style={{ fontSize: "0.75rem", color: "#8B6914", textTransform: "uppercase", letterSpacing: "0.15em", marginBottom: "0.6rem" }}>Filter by category</div>
+            <div style={{ fontSize: "0.95rem", color: "#8B6914", textTransform: "uppercase", letterSpacing: "0.15em", marginBottom: "0.6rem" }}>Filter by category</div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem" }}>
               {categories.map(cat => (
                 <button
@@ -478,7 +478,7 @@ export default function App() {
                     border: `1.5px solid ${filterCategory === cat ? "#8B6914" : "#D4C4A8"}`,
                     background: filterCategory === cat ? "#8B6914" : "white",
                     color: filterCategory === cat ? "white" : "#5C3317",
-                    fontSize: "0.75rem",
+                    fontSize: "0.95rem",
                     cursor: "pointer",
                     fontFamily: "Georgia, serif",
                   }}
@@ -490,7 +490,7 @@ export default function App() {
           </div>
 
           {/* Herb Cards */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.95rem" }}>
             {filteredHerbs.map(herb => (
               <div
                 key={herb.id}
@@ -560,7 +560,7 @@ margin: "0 auto",
                   boxShadow: "0 2px 10px rgba(44,24,16,0.07)"
                 }}
               >
-                <div style={{ display: "flex", alignItems: "flex-start", gap: "0.75rem" }}>
+                <div style={{ display: "flex", alignItems: "flex-start", gap: "0.95rem" }}>
                   <div style={{ background: "#FAF7F2", borderRadius: "10px", padding: "0.3rem", display: "flex", alignItems: "center" }}><HerbIcon type={recipe.iconType} size={56} /></div>
                   <div style={{ flex: 1 }}>
                     <div style={{ fontSize: "0.9rem", color: "white", background: recipe.tagColor, borderRadius: "10px", padding: "0.15rem 0.6rem", display: "inline-block", marginBottom: "0.3rem" }}>
@@ -568,13 +568,13 @@ margin: "0 auto",
                     </div>
                     <div style={{ fontWeight: "bold", fontSize: "1rem", color: "#2C1810", lineHeight: 1.2 }}>{recipe.englishName}</div>
                     <div style={{ fontSize: "0.85rem", color: "#8B6914", marginBottom: "0.5rem" }}>{recipe.name}</div>
-                    <div style={{ display: "flex", gap: "0.75rem", fontSize: "0.75rem", color: "#7A6055" }}>
+                    <div style={{ display: "flex", gap: "0.95rem", fontSize: "0.95rem", color: "#7A6055" }}>
                       <span>⏱ {recipe.cookTime}</span>
                       <span>👥 {recipe.servings}</span>
                     </div>
                   </div>
                 </div>
-                <div style={{ marginTop: "0.75rem", display: "flex", flexWrap: "wrap", gap: "0.35rem" }}>
+                <div style={{ marginTop: "0.95rem", display: "flex", flexWrap: "wrap", gap: "0.35rem" }}>
                   {recipe.herbs.map((h, i) => (
                     <span key={i} style={{ fontSize: "0.9rem", background: "#FAF7F2", border: "1px solid #D4C4A8", borderRadius: "8px", padding: "0.15rem 0.5rem", color: "#5C3317" }}>
                       🌿 {h}
@@ -582,7 +582,7 @@ margin: "0 auto",
                   ))}
                 </div>
                 <div style={{ marginTop: "0.6rem", fontSize: "0.72rem", color: "#4A7C59" }}>
-                  {recipe.benefits.slice(0, 2).map((b, i) => <span key={i} style={{ marginRight: "0.75rem" }}>✓ {b}</span>)}
+                  {recipe.benefits.slice(0, 2).map((b, i) => <span key={i} style={{ marginRight: "0.95rem" }}>✓ {b}</span>)}
                   <span style={{ color: "#C8A96E" }}>Tap for full recipe →</span>
                 </div>
               </div>
@@ -615,13 +615,13 @@ margin: "0 auto",
               <div style={{ fontWeight: "bold", fontSize: "1.3rem", color: "#2C1810" }}>{selectedHerb.name}</div>
               <div style={{ color: "#8B6914", fontSize: "1rem" }}>{selectedHerb.chineseName} · {selectedHerb.pinyinName}</div>
               <div style={{ display: "flex", justifyContent: "center", gap: "0.5rem", marginTop: "0.5rem" }}>
-                <span style={{ fontSize: "0.75rem", background: "#E8DFD0", borderRadius: "10px", padding: "0.2rem 0.6rem", color: "#5C3317" }}>🔥 {selectedHerb.nature}</span>
-                <span style={{ fontSize: "0.75rem", background: "#E8DFD0", borderRadius: "10px", padding: "0.2rem 0.6rem", color: "#5C3317" }}>👅 {selectedHerb.flavour}</span>
-                <span style={{ fontSize: "0.75rem", background: categoryColors[selectedHerb.category] || "#8B6914", borderRadius: "10px", padding: "0.2rem 0.6rem", color: "white" }}>{selectedHerb.category}</span>
+                <span style={{ fontSize: "0.95rem", background: "#E8DFD0", borderRadius: "10px", padding: "0.2rem 0.6rem", color: "#5C3317" }}>🔥 {selectedHerb.nature}</span>
+                <span style={{ fontSize: "0.95rem", background: "#E8DFD0", borderRadius: "10px", padding: "0.2rem 0.6rem", color: "#5C3317" }}>👅 {selectedHerb.flavour}</span>
+                <span style={{ fontSize: "0.95rem", background: categoryColors[selectedHerb.category] || "#8B6914", borderRadius: "10px", padding: "0.2rem 0.6rem", color: "white" }}>{selectedHerb.category}</span>
               </div>
             </div>
 
-            <div style={{ background: "white", borderRadius: "12px", padding: "1rem", marginBottom: "0.75rem" }}>
+            <div style={{ background: "white", borderRadius: "12px", padding: "1rem", marginBottom: "0.95rem" }}>
               <div style={{ fontWeight: "bold", color: "#4A7C59", marginBottom: "0.5rem", fontSize: "0.9rem" }}>✅ Benefits</div>
               {selectedHerb.benefits.map((b, i) => (
                 <div key={i} style={{ fontSize: "0.82rem", color: "#2C1810", padding: "0.25rem 0", borderBottom: i < selectedHerb.benefits.length - 1 ? "1px solid #F0EAE0" : "none" }}>
@@ -669,7 +669,7 @@ margin: "0 auto",
               </div>
             </div>
 
-            <div style={{ background: "white", borderRadius: "12px", padding: "1rem", marginBottom: "0.75rem" }}>
+            <div style={{ background: "white", borderRadius: "12px", padding: "1rem", marginBottom: "0.95rem" }}>
               <div style={{ fontWeight: "bold", color: "#2C1810", marginBottom: "0.6rem", fontSize: "0.9rem" }}>🌿 Ingredients</div>
               <div style={{ fontSize: "0.82rem", color: "#5C3317", marginBottom: "0.4rem" }}><strong>Protein:</strong> {selectedRecipe.protein}</div>
               <div style={{ fontSize: "0.82rem", color: "#5C3317" }}><strong>Herbs:</strong></div>
@@ -678,7 +678,7 @@ margin: "0 auto",
               ))}
             </div>
 
-            <div style={{ background: "white", borderRadius: "12px", padding: "1rem", marginBottom: "0.75rem" }}>
+            <div style={{ background: "white", borderRadius: "12px", padding: "1rem", marginBottom: "0.95rem" }}>
               <div style={{ fontWeight: "bold", color: "#2C1810", marginBottom: "0.6rem", fontSize: "0.9rem" }}>📋 Instructions</div>
               {selectedRecipe.instructions.map((step, i) => (
                 <div key={i} style={{ display: "flex", gap: "0.6rem", marginBottom: "0.5rem" }}>
