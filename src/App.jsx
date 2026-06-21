@@ -341,7 +341,7 @@ const recipes = [
     id: 2,
     name: "玉竹沙参汤 (Jade Bamboo & Adenophora Soup)",
     englishName: "Moistening Lung Soup",
-    herbs: ["Solomon's Seal (玉竹)", "Adenophora Root (沙参)", "Wolfberry (枸杞)", "Red Dates (红枣)"],
+    herbs: ["Solomon's Seal (玉竹) 20g", "Adenophora Root (沙参) 20g", "Wolfberry (枸杞) 15g", "Red Dates (红枣) 5 pieces"],
     protein: "Pork or duck",
     instructions: [
       "Rinse all herbs thoroughly.",
