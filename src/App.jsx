@@ -257,7 +257,8 @@ const herbs = [
     risks: ["Avoid if experiencing constipation", "May cause bloating if eaten in large amounts raw", "Consult doctor if on diabetes medication"],
     flavour: "Sweet",
     nature: "Neutral",
-    iconType: "chineseyamphoto",
+    iconType: "chineseyam",
+        photo: chineseyamPhoto,
     color: "#C4A882"
   },
   {
