@@ -1,4 +1,4 @@
-﻿    import { useState } from "react";
+    import { useState } from "react";
 import codonopsisPhoto from "./assets/codonopsis.jpg";
 import wolfberryPhoto from "./assets/wolfberry.jpg";
 import reddatesPhoto from "./assets/reddates.jpg";
@@ -15,7 +15,7 @@ const HerbVisual = ({ photo, iconType, size = 48, rounded = "10px" }) => {
       <img
         src={photo}
         alt=""
-        style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: rounded, display: "block" }}
+        style={{ width: "100%", height: "100px", objectFit: "cover", borderRadius: rounded, display: "block" }}
       />
     );
   }
