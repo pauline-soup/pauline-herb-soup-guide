@@ -510,7 +510,7 @@ export default function App() {
                   boxShadow: "0 2px 8px rgba(44,24,16,0.06)"
                 }}
               >
-                <div style={{
+               height: herb.photo ? "100px" : "auto",
                   display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "0.4rem",
                   background: "#FAF7F2",
                   borderRadius: "10px",
