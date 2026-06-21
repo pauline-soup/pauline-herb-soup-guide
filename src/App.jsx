@@ -311,7 +311,8 @@ const herbs = [
     risks: ["Avoid during fever, cold or active infection", "May lower blood sugar – monitor if diabetic or on medication", "Avoid combining with caffeine or stimulants", "Consult a doctor if on blood thinners"],
     flavour: "Bitter, then sweet",
     nature: "Cooling",
-    iconType: "ginsengphoto",
+   iconType: "ginseng",
+        photo: ginsengPhoto,
     color: "#C9A876"
   },
 ];
