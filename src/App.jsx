@@ -1,6 +1,6 @@
 ﻿    import { useState } from "react";
 import codonopsisPhoto from "./assets/codonopsis.jpg";
-import wolfberryPhoto from "./assets/Go Qi.jpeg";
+import wolfberryPhoto from "./assets/wolfberry.jpg";
 import reddatesPhoto from "./assets/reddates.jpg";
 import solomonssealPhoto from "./assets/solomonsseal.jpg";
 import ginsengPhoto from "./assets/ginseng.jpg";
@@ -229,7 +229,7 @@ const herbs = [
     risks: ["Avoid if phlegm-damp constitutions", "May lower blood sugar – monitor if diabetic", "Avoid with loose stools / diarrhoea"],
     flavour: "Sweet, slightly bitter",
     nature: "Slightly cool",
-    iconType: "solomonsseal",
+    iconType: "solomonssealphoto",
     color: "#6B8E6B"
   },
   {
@@ -242,7 +242,7 @@ const herbs = [
     risks: ["Avoid in severe constipation", "Overconsumption causes bloating", "Remove bitter green sprout to avoid cooling effects"],
     flavour: "Sweet, astringent",
     nature: "Neutral",
-    iconType: "lotusseed",
+    iconType: "lotusseedphoto",
     color: "#D4A0A0"
   },
   {
@@ -255,7 +255,7 @@ const herbs = [
     risks: ["Avoid if experiencing constipation", "May cause bloating if eaten in large amounts raw", "Consult doctor if on diabetes medication"],
     flavour: "Sweet",
     nature: "Neutral",
-    iconType: "chineseyam",
+    iconType: "chineseyamphoto",
     color: "#C4A882"
   },
   {
@@ -281,7 +281,7 @@ const herbs = [
     risks: ["Avoid during pregnancy (may stimulate uterus)", "Thins blood – avoid with anticoagulants", "Not suitable during heavy menstruation"],
     flavour: "Sweet, pungent, bitter",
     nature: "Warm",
-    iconType: "angelica",
+    iconType: "angelicaphoto",
     color: "#C2955C"
   },
   {
@@ -307,7 +307,7 @@ const herbs = [
     risks: ["Avoid during fever, cold or active infection", "May lower blood sugar – monitor if diabetic or on medication", "Avoid combining with caffeine or stimulants", "Consult a doctor if on blood thinners"],
     flavour: "Bitter, then sweet",
     nature: "Cooling",
-    iconType: "ginseng",
+    iconType: "ginsengphoto",
     color: "#C9A876"
   },
 ];
