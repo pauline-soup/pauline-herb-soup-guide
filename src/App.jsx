@@ -510,8 +510,8 @@ export default function App() {
                   background: herb.photo ? "transparent" : "#FAF7F2",
                   borderRadius: "10px",
                   padding: herb.photo ? "0" : "0.4rem",
-                  aspectRatio: "unset",
-                  height: herb.photo ? "100px" : "auto",
+                  aspectRatio: herb.photo ? "1 / 1" : "auto",
+                  height: herb.photo ? "auto" : "auto",
                   overflow: "hidden"
                 }}>
                   <HerbVisual photo={herb.photo} iconType={herb.iconType} size={48} />
