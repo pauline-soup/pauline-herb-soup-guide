@@ -516,13 +516,10 @@ export default function App() {
                   borderRadius: "10px",
                   padding: herb.photo ? "0" : "0.4rem",
                   height: "100px",
-maxHeight: "100px",
-minHeight: "100px",
-maxHeight: "100px",
-
-
+                  maxHeight: "100px",
+                  minHeight: "100px",
                   overflow: "hidden"
-                }}>
+                  }}>
                   <HerbVisual photo={herb.photo} iconType={herb.iconType} size={48} />
                 </div>
                 <div style={{ fontSize: "0.9rem", color: "white", background: categoryColors[herb.category] || "#8B6914", borderRadius: "10px", padding: "0.15rem 0.5rem", display: "inline-block", marginBottom: "0.4rem" }}>
