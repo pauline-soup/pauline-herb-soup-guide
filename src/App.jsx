@@ -1,7 +1,12 @@
 ﻿    import { useState } from "react";
 import codonopsisPhoto from "./assets/codonopsis.jpg";
-import wolfberryPhoto from "./assets/Go Qi.jpeg";
-import reddatesPhoto from "./assets/Hong Zao.jpeg";
+import wolfberryPhoto from "./assets/wolfberry.jpg";
+import reddatesPhoto from "./assets/reddates.jpg";
+import solomonssealPhoto from "./assets/solomonsseal.jpg";
+import ginsengPhoto from "./assets/ginseng.jpg";
+import angelicaPhoto from "./assets/angelica.jpg";
+import chineseyamPhoto from "./assets/chineseyam.jpg";
+import lotusseedsPhoto from "./assets/lotusseeds.jpg";
 
 // Renders a real photo if provided, otherwise falls back to the illustrated icon
 const HerbVisual = ({ photo, iconType, size = 48, rounded = "10px" }) => {
@@ -224,7 +229,7 @@ const herbs = [
     risks: ["Avoid if phlegm-damp constitutions", "May lower blood sugar – monitor if diabetic", "Avoid with loose stools / diarrhoea"],
     flavour: "Sweet, slightly bitter",
     nature: "Slightly cool",
-    iconType: "solomonsseal",
+    iconType: "solomonssealphoto",
     color: "#6B8E6B"
   },
   {
@@ -237,7 +242,7 @@ const herbs = [
     risks: ["Avoid in severe constipation", "Overconsumption causes bloating", "Remove bitter green sprout to avoid cooling effects"],
     flavour: "Sweet, astringent",
     nature: "Neutral",
-    iconType: "lotusseed",
+    iconType: "lotusseedphoto",
     color: "#D4A0A0"
   },
   {
@@ -250,7 +255,7 @@ const herbs = [
     risks: ["Avoid if experiencing constipation", "May cause bloating if eaten in large amounts raw", "Consult doctor if on diabetes medication"],
     flavour: "Sweet",
     nature: "Neutral",
-    iconType: "chineseyam",
+    iconType: "chineseyamphoto",
     color: "#C4A882"
   },
   {
@@ -276,7 +281,7 @@ const herbs = [
     risks: ["Avoid during pregnancy (may stimulate uterus)", "Thins blood – avoid with anticoagulants", "Not suitable during heavy menstruation"],
     flavour: "Sweet, pungent, bitter",
     nature: "Warm",
-    iconType: "angelica",
+    iconType: "angelicaphoto",
     color: "#C2955C"
   },
   {
@@ -302,7 +307,7 @@ const herbs = [
     risks: ["Avoid during fever, cold or active infection", "May lower blood sugar – monitor if diabetic or on medication", "Avoid combining with caffeine or stimulants", "Consult a doctor if on blood thinners"],
     flavour: "Bitter, then sweet",
     nature: "Cooling",
-    iconType: "ginseng",
+    iconType: "ginsengphoto",
     color: "#C9A876"
   },
 ];
@@ -466,7 +471,7 @@ export default function App() {
         <div style={{ padding: "1.25rem" }}>
           {/* Filter */}
           <div style={{ marginBottom: "1.25rem" }}>
-            <div style={{ fontSize: "0.75rem", color: "#8B6914", textTransform: "uppercase", letterSpacing: "0.15em", marginBottom: "0.6rem" }}>Filter by category</div>
+            <div style={{ fontSize: "0.95rem", color: "#8B6914", textTransform: "uppercase", letterSpacing: "0.15em", marginBottom: "0.6rem" }}>Filter by category</div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem" }}>
               {categories.map(cat => (
                 <button
@@ -478,7 +483,7 @@ export default function App() {
                     border: `1.5px solid ${filterCategory === cat ? "#8B6914" : "#D4C4A8"}`,
                     background: filterCategory === cat ? "#8B6914" : "white",
                     color: filterCategory === cat ? "white" : "#5C3317",
-                    fontSize: "0.75rem",
+                    fontSize: "0.95rem",
                     cursor: "pointer",
                     fontFamily: "Georgia, serif",
                   }}
@@ -490,7 +495,7 @@ export default function App() {
           </div>
 
           {/* Herb Cards */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.95rem" }}>
             {filteredHerbs.map(herb => (
               <div
                 key={herb.id}
@@ -507,23 +512,24 @@ export default function App() {
               >
                 <div style={{
                   display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "0.4rem",
-                  background: herb.photo ? "transparent" : "#FAF7F2",
+                  background: "#FAF7F2",
                   borderRadius: "10px",
                   padding: herb.photo ? "0" : "0.4rem",
-                  aspectRatio: herb.photo ? "1 / 1" : "auto",
-                  height: herb.photo ? "auto" : "auto",
+                  height: "100px",
+width: "100px",
+margin: "0 auto",
                   overflow: "hidden"
                 }}>
                   <HerbVisual photo={herb.photo} iconType={herb.iconType} size={48} />
                 </div>
-                <div style={{ fontSize: "0.7rem", color: "white", background: categoryColors[herb.category] || "#8B6914", borderRadius: "10px", padding: "0.15rem 0.5rem", display: "inline-block", marginBottom: "0.4rem" }}>
+                <div style={{ fontSize: "0.9rem", color: "white", background: categoryColors[herb.category] || "#8B6914", borderRadius: "10px", padding: "0.15rem 0.5rem", display: "inline-block", marginBottom: "0.4rem" }}>
                   {herb.category}
                 </div>
                 <div style={{ fontSize: "1rem", fontWeight: "bold", color: "#2C1810", lineHeight: 1.2 }}>{herb.name}</div>
                 <div style={{ fontSize: "0.9rem", color: "#8B6914" }}>{herb.chineseName} · {herb.pinyinName}</div>
                 <div style={{ display: "flex", gap: "0.4rem", marginTop: "0.5rem", flexWrap: "wrap" }}>
-                  <span style={{ fontSize: "0.7rem", background: "#FAF7F2", border: "1px solid #D4C4A8", borderRadius: "8px", padding: "0.1rem 0.4rem", color: "#5C3317" }}>🔥 {herb.nature}</span>
-                  <span style={{ fontSize: "0.7rem", background: "#FAF7F2", border: "1px solid #D4C4A8", borderRadius: "8px", padding: "0.1rem 0.4rem", color: "#5C3317" }}>👅 {herb.flavour}</span>
+                  <span style={{ fontSize: "0.9rem", background: "#FAF7F2", border: "1px solid #D4C4A8", borderRadius: "8px", padding: "0.1rem 0.4rem", color: "#5C3317" }}>🔥 {herb.nature}</span>
+                  <span style={{ fontSize: "0.9rem", background: "#FAF7F2", border: "1px solid #D4C4A8", borderRadius: "8px", padding: "0.1rem 0.4rem", color: "#5C3317" }}>👅 {herb.flavour}</span>
                 </div>
                 <div style={{ marginTop: "0.6rem", fontSize: "0.72rem", color: "#7A6055" }}>
                   {herb.benefits.slice(0, 2).map((b, i) => (
@@ -540,7 +546,7 @@ export default function App() {
       {/* Recipes Tab */}
       {activeTab === "recipes" && (
         <div style={{ padding: "1.25rem" }}>
-          <div style={{ background: "linear-gradient(135deg, #FFF8EE, #FAF0DC)", border: "1px solid #E8DFD0", borderRadius: "12px", padding: "1rem", marginBottom: "1.25rem", fontSize: "0.82rem", color: "#5C3317", lineHeight: 1.6 }}>
+          <div style={{ background: "linear-gradient(135deg, #FFF8EE, #FAF0DC)", border: "1px solid #E8DFD0", borderRadius: "12px", padding: "1rem", marginBottom: "1.25rem", fontSize: "1rem", color: "#5C3317", lineHeight: 1.6 }}>
             <strong>💡 General Benefits of Chinese Herb Soups:</strong><br />
             Regular consumption supports qi (vital energy) & blood circulation, strengthens immunity, nourishes internal organs, promotes healthy skin, improves sleep quality, and aligns body with seasonal changes — a cornerstone of preventive health in TCM.
           </div>
@@ -559,29 +565,29 @@ export default function App() {
                   boxShadow: "0 2px 10px rgba(44,24,16,0.07)"
                 }}
               >
-                <div style={{ display: "flex", alignItems: "flex-start", gap: "0.75rem" }}>
+                <div style={{ display: "flex", alignItems: "flex-start", gap: "0.95rem" }}>
                   <div style={{ background: "#FAF7F2", borderRadius: "10px", padding: "0.3rem", display: "flex", alignItems: "center" }}><HerbIcon type={recipe.iconType} size={56} /></div>
                   <div style={{ flex: 1 }}>
-                    <div style={{ fontSize: "0.7rem", color: "white", background: recipe.tagColor, borderRadius: "10px", padding: "0.15rem 0.6rem", display: "inline-block", marginBottom: "0.3rem" }}>
+                    <div style={{ fontSize: "0.9rem", color: "white", background: recipe.tagColor, borderRadius: "10px", padding: "0.15rem 0.6rem", display: "inline-block", marginBottom: "0.3rem" }}>
                       {recipe.tag}
                     </div>
                     <div style={{ fontWeight: "bold", fontSize: "1rem", color: "#2C1810", lineHeight: 1.2 }}>{recipe.englishName}</div>
                     <div style={{ fontSize: "0.85rem", color: "#8B6914", marginBottom: "0.5rem" }}>{recipe.name}</div>
-                    <div style={{ display: "flex", gap: "0.75rem", fontSize: "0.75rem", color: "#7A6055" }}>
+                    <div style={{ display: "flex", gap: "0.95rem", fontSize: "0.95rem", color: "#7A6055" }}>
                       <span>⏱ {recipe.cookTime}</span>
                       <span>👥 {recipe.servings}</span>
                     </div>
                   </div>
                 </div>
-                <div style={{ marginTop: "0.75rem", display: "flex", flexWrap: "wrap", gap: "0.35rem" }}>
+                <div style={{ marginTop: "0.95rem", display: "flex", flexWrap: "wrap", gap: "0.35rem" }}>
                   {recipe.herbs.map((h, i) => (
-                    <span key={i} style={{ fontSize: "0.7rem", background: "#FAF7F2", border: "1px solid #D4C4A8", borderRadius: "8px", padding: "0.15rem 0.5rem", color: "#5C3317" }}>
+                    <span key={i} style={{ fontSize: "0.9rem", background: "#FAF7F2", border: "1px solid #D4C4A8", borderRadius: "8px", padding: "0.15rem 0.5rem", color: "#5C3317" }}>
                       🌿 {h}
                     </span>
                   ))}
                 </div>
                 <div style={{ marginTop: "0.6rem", fontSize: "0.72rem", color: "#4A7C59" }}>
-                  {recipe.benefits.slice(0, 2).map((b, i) => <span key={i} style={{ marginRight: "0.75rem" }}>✓ {b}</span>)}
+                  {recipe.benefits.slice(0, 2).map((b, i) => <span key={i} style={{ marginRight: "0.95rem" }}>✓ {b}</span>)}
                   <span style={{ color: "#C8A96E" }}>Tap for full recipe →</span>
                 </div>
               </div>
@@ -614,16 +620,16 @@ export default function App() {
               <div style={{ fontWeight: "bold", fontSize: "1.3rem", color: "#2C1810" }}>{selectedHerb.name}</div>
               <div style={{ color: "#8B6914", fontSize: "1rem" }}>{selectedHerb.chineseName} · {selectedHerb.pinyinName}</div>
               <div style={{ display: "flex", justifyContent: "center", gap: "0.5rem", marginTop: "0.5rem" }}>
-                <span style={{ fontSize: "0.75rem", background: "#E8DFD0", borderRadius: "10px", padding: "0.2rem 0.6rem", color: "#5C3317" }}>🔥 {selectedHerb.nature}</span>
-                <span style={{ fontSize: "0.75rem", background: "#E8DFD0", borderRadius: "10px", padding: "0.2rem 0.6rem", color: "#5C3317" }}>👅 {selectedHerb.flavour}</span>
-                <span style={{ fontSize: "0.75rem", background: categoryColors[selectedHerb.category] || "#8B6914", borderRadius: "10px", padding: "0.2rem 0.6rem", color: "white" }}>{selectedHerb.category}</span>
+                <span style={{ fontSize: "0.95rem", background: "#E8DFD0", borderRadius: "10px", padding: "0.2rem 0.6rem", color: "#5C3317" }}>🔥 {selectedHerb.nature}</span>
+                <span style={{ fontSize: "0.95rem", background: "#E8DFD0", borderRadius: "10px", padding: "0.2rem 0.6rem", color: "#5C3317" }}>👅 {selectedHerb.flavour}</span>
+                <span style={{ fontSize: "0.95rem", background: categoryColors[selectedHerb.category] || "#8B6914", borderRadius: "10px", padding: "0.2rem 0.6rem", color: "white" }}>{selectedHerb.category}</span>
               </div>
             </div>
 
-            <div style={{ background: "white", borderRadius: "12px", padding: "1rem", marginBottom: "0.75rem" }}>
+            <div style={{ background: "white", borderRadius: "12px", padding: "1rem", marginBottom: "0.95rem" }}>
               <div style={{ fontWeight: "bold", color: "#4A7C59", marginBottom: "0.5rem", fontSize: "0.9rem" }}>✅ Benefits</div>
               {selectedHerb.benefits.map((b, i) => (
-                <div key={i} style={{ fontSize: "0.82rem", color: "#2C1810", padding: "0.25rem 0", borderBottom: i < selectedHerb.benefits.length - 1 ? "1px solid #F0EAE0" : "none" }}>
+                <div key={i} style={{ fontSize: "1rem", color: "#2C1810", padding: "0.25rem 0", borderBottom: i < selectedHerb.benefits.length - 1 ? "1px solid #F0EAE0" : "none" }}>
                   • {b}
                 </div>
               ))}
@@ -632,7 +638,7 @@ export default function App() {
             <div style={{ background: "white", borderRadius: "12px", padding: "1rem", marginBottom: "1rem" }}>
               <div style={{ fontWeight: "bold", color: "#CC4400", marginBottom: "0.5rem", fontSize: "0.9rem" }}>⚠️ Risks & Cautions</div>
               {selectedHerb.risks.map((r, i) => (
-                <div key={i} style={{ fontSize: "0.82rem", color: "#2C1810", padding: "0.25rem 0", borderBottom: i < selectedHerb.risks.length - 1 ? "1px solid #F0EAE0" : "none" }}>
+                <div key={i} style={{ fontSize: "1rem", color: "#2C1810", padding: "0.25rem 0", borderBottom: i < selectedHerb.risks.length - 1 ? "1px solid #F0EAE0" : "none" }}>
                   • {r}
                 </div>
               ))}
@@ -668,21 +674,21 @@ export default function App() {
               </div>
             </div>
 
-            <div style={{ background: "white", borderRadius: "12px", padding: "1rem", marginBottom: "0.75rem" }}>
+            <div style={{ background: "white", borderRadius: "12px", padding: "1rem", marginBottom: "0.95rem" }}>
               <div style={{ fontWeight: "bold", color: "#2C1810", marginBottom: "0.6rem", fontSize: "0.9rem" }}>🌿 Ingredients</div>
-              <div style={{ fontSize: "0.82rem", color: "#5C3317", marginBottom: "0.4rem" }}><strong>Protein:</strong> {selectedRecipe.protein}</div>
-              <div style={{ fontSize: "0.82rem", color: "#5C3317" }}><strong>Herbs:</strong></div>
+              <div style={{ fontSize: "1rem", color: "#5C3317", marginBottom: "0.4rem" }}><strong>Protein:</strong> {selectedRecipe.protein}</div>
+              <div style={{ fontSize: "1rem", color: "#5C3317" }}><strong>Herbs:</strong></div>
               {selectedRecipe.herbs.map((h, i) => (
-                <div key={i} style={{ fontSize: "0.82rem", color: "#2C1810", padding: "0.2rem 0" }}>• {h}</div>
+                <div key={i} style={{ fontSize: "1rem", color: "#2C1810", padding: "0.2rem 0" }}>• {h}</div>
               ))}
             </div>
 
-            <div style={{ background: "white", borderRadius: "12px", padding: "1rem", marginBottom: "0.75rem" }}>
+            <div style={{ background: "white", borderRadius: "12px", padding: "1rem", marginBottom: "0.95rem" }}>
               <div style={{ fontWeight: "bold", color: "#2C1810", marginBottom: "0.6rem", fontSize: "0.9rem" }}>📋 Instructions</div>
               {selectedRecipe.instructions.map((step, i) => (
                 <div key={i} style={{ display: "flex", gap: "0.6rem", marginBottom: "0.5rem" }}>
-                  <div style={{ minWidth: "22px", height: "22px", borderRadius: "50%", background: "#2C1810", color: "#C8A96E", fontSize: "0.7rem", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "bold" }}>{i + 1}</div>
-                  <div style={{ fontSize: "0.82rem", color: "#2C1810", lineHeight: 1.5 }}>{step}</div>
+                  <div style={{ minWidth: "22px", height: "22px", borderRadius: "50%", background: "#2C1810", color: "#C8A96E", fontSize: "0.9rem", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "bold" }}>{i + 1}</div>
+                  <div style={{ fontSize: "1rem", color: "#2C1810", lineHeight: 1.5 }}>{step}</div>
                 </div>
               ))}
             </div>
@@ -690,7 +696,7 @@ export default function App() {
             <div style={{ background: "linear-gradient(135deg, #FFF8EE, #FAF0DC)", border: "1px solid #E8DFD0", borderRadius: "12px", padding: "1rem", marginBottom: "1rem" }}>
               <div style={{ fontWeight: "bold", color: "#4A7C59", marginBottom: "0.5rem", fontSize: "0.9rem" }}>✅ Health Benefits</div>
               {selectedRecipe.benefits.map((b, i) => (
-                <div key={i} style={{ fontSize: "0.82rem", color: "#2C1810", padding: "0.2rem 0" }}>• {b}</div>
+                <div key={i} style={{ fontSize: "1rem", color: "#2C1810", padding: "0.2rem 0" }}>• {b}</div>
               ))}
             </div>
 
