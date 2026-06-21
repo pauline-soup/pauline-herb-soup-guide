@@ -516,6 +516,9 @@ export default function App() {
                   borderRadius: "10px",
                   padding: herb.photo ? "0" : "0.4rem",
                   height: "100px",
+maxHeight: "100px",
+minHeight: "100px",
+maxHeight: "100px",
 
 
                   overflow: "hidden"
