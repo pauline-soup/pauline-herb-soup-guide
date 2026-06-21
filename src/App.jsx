@@ -362,7 +362,7 @@ const recipes = [
     id: 3,
     name: "补血养颜汤 (Blood-Nourishing Beauty Soup)",
     englishName: "Beauty & Blood Tonic Soup",
-    herbs: ["Angelica Root (当归)", "Red Dates (红枣)", "Wolfberry (枸杞)", "Astragalus Root (黄芪)", "Longan (龙眼肉)"],
+    herbs: ["Angelica Root (当归) 15g", "Red Dates (红枣) 10 pieces", "Wolfberry (枸杞) 20g", "Astragalus Root (黄芪) 20g", "Longan (龙眼肉) 15g"],
     protein: "Chicken or pork",
     instructions: [
       "Rinse all herbs. Soak angelica root for 20 mins.",
