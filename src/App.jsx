@@ -229,7 +229,8 @@ const herbs = [
     risks: ["Avoid if phlegm-damp constitutions", "May lower blood sugar – monitor if diabetic", "Avoid with loose stools / diarrhoea"],
     flavour: "Sweet, slightly bitter",
     nature: "Slightly cool",
-    iconType: "solomonssealphoto",
+    iconType: "solomonsseal",
+    photo: solomonssealPhoto,
     color: "#6B8E6B"
   },
   {
