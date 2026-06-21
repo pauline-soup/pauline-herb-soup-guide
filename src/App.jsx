@@ -711,6 +711,6 @@ export default function App() {
     </div>
   );
 }
-Fix photo size
+
     
 
