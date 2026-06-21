@@ -243,7 +243,8 @@ const herbs = [
     risks: ["Avoid in severe constipation", "Overconsumption causes bloating", "Remove bitter green sprout to avoid cooling effects"],
     flavour: "Sweet, astringent",
     nature: "Neutral",
-    iconType: "lotusseedphoto",
+    iconType: "lotusseed",
+        photo: lotusseedsPhoto,
     color: "#D4A0A0"
   },
   {
