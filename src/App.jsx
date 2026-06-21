@@ -321,8 +321,7 @@ const recipes = [
   {
     id: 1,
     name: "四神汤 (Four Spirits Soup)",
-    englishName: "Four Spirits Nourishing Soup",
-    herbs: ["Chinese Yam (淮山)", "Lotus Seeds (莲子)", "Poria (茯苓)", "Euryale Seeds (芡实)"],
+    herbs: ["Chinese Yam (淮山) 30g", "Lotus Seeds (莲子) 30g", "Poria (茯苓) 20g", "Euryale Seeds (芡实) 20g"],
     protein: "Pork ribs or spare ribs",
     instructions: [
       "Soak all herbs for 30 minutes, rinse well.",
