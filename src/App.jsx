@@ -284,7 +284,8 @@ const herbs = [
     risks: ["Avoid during pregnancy (may stimulate uterus)", "Thins blood – avoid with anticoagulants", "Not suitable during heavy menstruation"],
     flavour: "Sweet, pungent, bitter",
     nature: "Warm",
-    iconType: "angelicaphoto",
+    iconType: "angelica",
+        photo: angelicaPhoto,
     color: "#C2955C"
   },
   {
