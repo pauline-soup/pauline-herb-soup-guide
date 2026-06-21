@@ -1,7 +1,12 @@
 ﻿    import { useState } from "react";
 import codonopsisPhoto from "./assets/codonopsis.jpg";
 import wolfberryPhoto from "./assets/Go Qi.jpeg";
-import reddatesPhoto from "./assets/Hong Zao.jpeg";
+import reddatesPhoto from "./assets/reddates.jpg";
+import solomonssealPhoto from "./assets/solomonsseal.jpg";
+import ginsengPhoto from "./assets/ginseng.jpg";
+import angelicaPhoto from "./assets/angelica.jpg";
+import chineseyamPhoto from "./assets/chineseyam.jpg";
+import lotusseedsPhoto from "./assets/lotusseeds.jpg";
 
 // Renders a real photo if provided, otherwise falls back to the illustrated icon
 const HerbVisual = ({ photo, iconType, size = 48, rounded = "10px" }) => {
