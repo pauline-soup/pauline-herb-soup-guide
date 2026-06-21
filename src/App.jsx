@@ -517,14 +517,14 @@ margin: "0 auto",
                 }}>
                   <HerbVisual photo={herb.photo} iconType={herb.iconType} size={48} />
                 </div>
-                <div style={{ fontSize: "0.7rem", color: "white", background: categoryColors[herb.category] || "#8B6914", borderRadius: "10px", padding: "0.15rem 0.5rem", display: "inline-block", marginBottom: "0.4rem" }}>
+                <div style={{ fontSize: "0.9rem", color: "white", background: categoryColors[herb.category] || "#8B6914", borderRadius: "10px", padding: "0.15rem 0.5rem", display: "inline-block", marginBottom: "0.4rem" }}>
                   {herb.category}
                 </div>
                 <div style={{ fontSize: "1rem", fontWeight: "bold", color: "#2C1810", lineHeight: 1.2 }}>{herb.name}</div>
                 <div style={{ fontSize: "0.9rem", color: "#8B6914" }}>{herb.chineseName} · {herb.pinyinName}</div>
                 <div style={{ display: "flex", gap: "0.4rem", marginTop: "0.5rem", flexWrap: "wrap" }}>
-                  <span style={{ fontSize: "0.7rem", background: "#FAF7F2", border: "1px solid #D4C4A8", borderRadius: "8px", padding: "0.1rem 0.4rem", color: "#5C3317" }}>🔥 {herb.nature}</span>
-                  <span style={{ fontSize: "0.7rem", background: "#FAF7F2", border: "1px solid #D4C4A8", borderRadius: "8px", padding: "0.1rem 0.4rem", color: "#5C3317" }}>👅 {herb.flavour}</span>
+                  <span style={{ fontSize: "0.9rem", background: "#FAF7F2", border: "1px solid #D4C4A8", borderRadius: "8px", padding: "0.1rem 0.4rem", color: "#5C3317" }}>🔥 {herb.nature}</span>
+                  <span style={{ fontSize: "0.9rem", background: "#FAF7F2", border: "1px solid #D4C4A8", borderRadius: "8px", padding: "0.1rem 0.4rem", color: "#5C3317" }}>👅 {herb.flavour}</span>
                 </div>
                 <div style={{ marginTop: "0.6rem", fontSize: "0.72rem", color: "#7A6055" }}>
                   {herb.benefits.slice(0, 2).map((b, i) => (
@@ -563,7 +563,7 @@ margin: "0 auto",
                 <div style={{ display: "flex", alignItems: "flex-start", gap: "0.75rem" }}>
                   <div style={{ background: "#FAF7F2", borderRadius: "10px", padding: "0.3rem", display: "flex", alignItems: "center" }}><HerbIcon type={recipe.iconType} size={56} /></div>
                   <div style={{ flex: 1 }}>
-                    <div style={{ fontSize: "0.7rem", color: "white", background: recipe.tagColor, borderRadius: "10px", padding: "0.15rem 0.6rem", display: "inline-block", marginBottom: "0.3rem" }}>
+                    <div style={{ fontSize: "0.9rem", color: "white", background: recipe.tagColor, borderRadius: "10px", padding: "0.15rem 0.6rem", display: "inline-block", marginBottom: "0.3rem" }}>
                       {recipe.tag}
                     </div>
                     <div style={{ fontWeight: "bold", fontSize: "1rem", color: "#2C1810", lineHeight: 1.2 }}>{recipe.englishName}</div>
@@ -576,7 +576,7 @@ margin: "0 auto",
                 </div>
                 <div style={{ marginTop: "0.75rem", display: "flex", flexWrap: "wrap", gap: "0.35rem" }}>
                   {recipe.herbs.map((h, i) => (
-                    <span key={i} style={{ fontSize: "0.7rem", background: "#FAF7F2", border: "1px solid #D4C4A8", borderRadius: "8px", padding: "0.15rem 0.5rem", color: "#5C3317" }}>
+                    <span key={i} style={{ fontSize: "0.9rem", background: "#FAF7F2", border: "1px solid #D4C4A8", borderRadius: "8px", padding: "0.15rem 0.5rem", color: "#5C3317" }}>
                       🌿 {h}
                     </span>
                   ))}
@@ -682,7 +682,7 @@ margin: "0 auto",
               <div style={{ fontWeight: "bold", color: "#2C1810", marginBottom: "0.6rem", fontSize: "0.9rem" }}>📋 Instructions</div>
               {selectedRecipe.instructions.map((step, i) => (
                 <div key={i} style={{ display: "flex", gap: "0.6rem", marginBottom: "0.5rem" }}>
-                  <div style={{ minWidth: "22px", height: "22px", borderRadius: "50%", background: "#2C1810", color: "#C8A96E", fontSize: "0.7rem", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "bold" }}>{i + 1}</div>
+                  <div style={{ minWidth: "22px", height: "22px", borderRadius: "50%", background: "#2C1810", color: "#C8A96E", fontSize: "0.9rem", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "bold" }}>{i + 1}</div>
                   <div style={{ fontSize: "0.82rem", color: "#2C1810", lineHeight: 1.5 }}>{step}</div>
                 </div>
               ))}
