@@ -382,7 +382,7 @@ const recipes = [
     id: 4,
     name: "花旗参鸡汤 (American Ginseng Chicken Soup)",
     englishName: "Energy & Immunity Chicken Soup",
-    herbs: ["American Ginseng (花旗参)", "Wolfberry (枸杞)", "Red Dates (红枣)", "Codonopsis Root (党参)"],
+    herbs: ["American Ginseng (花旗参) 15g", "Wolfberry (枸杞) 15g", "Red Dates (红枣) 6 pieces", "Codonopsis Root (党参) 20g"],
     protein: "Whole chicken or kampung chicken",
     instructions: [
       "Clean chicken and blanch in boiling water.",
