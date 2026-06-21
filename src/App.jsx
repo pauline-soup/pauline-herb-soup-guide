@@ -510,18 +510,18 @@ export default function App() {
                   boxShadow: "0 2px 8px rgba(44,24,16,0.06)"
                 }}
               >
-               <div style={{
-                  display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "0.4rem",
-                  background: "#FAF7F2",
-                  borderRadius: "10px",
-                  padding: herb.photo ? "0" : "0.4rem",
-                  height: "100px",
-                  maxHeight: "100px",
-                  minHeight: "100px",
-                  overflow: "hidden"
-                  }}>
-                  <HerbVisual photo={herb.photo} iconType={herb.iconType} size={48} />
-                </div>
+              <div style={{
+                display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "0.4rem",
+                background: "#FAF7F2",
+                borderRadius: "10px",
+                padding: herb.photo ? "0" : "0.4rem",
+                height: "100px",
+                maxHeight: "100px",
+                minHeight: "100px",
+                overflow: "hidden"
+              }}>
+                <HerbVisual photo={herb.photo} iconType={herb.iconType} size={48} />
+              </div>
                 <div style={{ fontSize: "0.9rem", color: "white", background: categoryColors[herb.category] || "#8B6914", borderRadius: "10px", padding: "0.15rem 0.5rem", display: "inline-block", marginBottom: "0.4rem" }}>
                   {herb.category}
                 </div>
