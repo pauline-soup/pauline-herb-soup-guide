@@ -7,7 +7,9 @@ import ginsengPhoto from "./assets/ginseng.jpg";
 import angelicaPhoto from "./assets/angelica.jpg";
 import chineseyamPhoto from "./assets/chineseyam.jpg";
 import lotusseedsPhoto from "./assets/lotusseeds.jpg";
-
+import astragalusPhoto from "./assets/astragalus.jpg";
+import poriaPhoto from "./assets/poria.jpg";
+import lovagePhoto from "./assets/lovage.jpg";
 // Renders a real photo if provided, otherwise falls back to the illustrated icon
 const HerbVisual = ({ photo, iconType, size = 48, rounded = "10px" }) => {
   if (photo) {
@@ -175,6 +177,7 @@ const herbs = [
     flavour: "Slightly sweet",
     nature: "Warm",
     iconType: "astragalus",
+    photo: astragalusPhoto,
     color: "#C8A96E"
   },
   {
@@ -244,7 +247,7 @@ const herbs = [
     flavour: "Sweet, astringent",
     nature: "Neutral",
     iconType: "lotusseed",
-        photo: lotusseedsPhoto,
+    photo: lotusseedsPhoto,
     color: "#D4A0A0"
   },
   {
@@ -258,7 +261,7 @@ const herbs = [
     flavour: "Sweet",
     nature: "Neutral",
     iconType: "chineseyam",
-        photo: chineseyamPhoto,
+    photo: chineseyamPhoto,
     color: "#C4A882"
   },
   {
@@ -272,6 +275,7 @@ const herbs = [
     flavour: "Sweet, bland",
     nature: "Neutral",
     iconType: "poria",
+    photo: poriaPhoto,
     color: "#A89080"
   },
   {
@@ -299,6 +303,7 @@ const herbs = [
     flavour: "Pungent",
     nature: "Warm",
     iconType: "lovage",
+    photo: lovagePhoto,
     color: "#8B6914"
   },
   {
@@ -312,7 +317,7 @@ const herbs = [
     flavour: "Bitter, then sweet",
     nature: "Cooling",
    iconType: "ginseng",
-        photo: ginsengPhoto,
+    photo: ginsengPhoto,
     color: "#C9A876"
   },
 ];
