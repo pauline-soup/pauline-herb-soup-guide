@@ -113,7 +113,15 @@ const HerbIcon = ({ type, size = 48 }) => {
         <path d="M35 38 Q50 45 65 38 M32 50 Q50 56 68 50 M35 62 Q50 56 65 62" fill="none" stroke="#A8895A" strokeWidth="0.8" opacity="0.6" />
       </svg>
     ),
-    ginseng: (
+    longan: (
+      <svg viewBox="0 0 100 100" width={size} height={size}>
+        <circle cx="35" cy="50" r="16" fill="#8B5A2B" stroke="#5C3A1B" strokeWidth="1.5" />
+        <circle cx="62" cy="42" r="14" fill="#A06A35" stroke="#5C3A1B" strokeWidth="1.5" />
+        <circle cx="55" cy="65" r="13" fill="#94602F" stroke="#5C3A1B" strokeWidth="1.5" />
+        <path d="M50 25 Q55 15 62 18" fill="none" stroke="#5C3A1B" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    ),
+      ginseng: (
       <svg viewBox="0 0 100 100" width={size} height={size}>
         <path d="M50 12 Q56 30 53 45 Q58 55 50 60 Q42 55 47 45 Q44 30 50 12" fill="#E8D9B8" stroke="#B89860" strokeWidth="1.5" />
         <path d="M50 60 Q44 70 36 78" fill="none" stroke="#B89860" strokeWidth="3" strokeLinecap="round" />
@@ -330,8 +338,20 @@ const herbs = [
     photo: ginsengPhoto,
     color: "#C9A876"
   },
+  {
+    id: 12,
+    chineseName: "龙眼肉",
+    name: "Dried Longan",
+    pinyinName: "Lóng Yǎn Ròu",
+    category: "Blood-Nourishing",
+    benefits: ["Nourishes blood", "Calms the mind & supports sleep", "Tonifies the heart & spleen", "Relieves fatigue & poor memory", "Good for postpartum recovery"],
+    risks: ["Avoid excess if prone to phlegm-damp or excess heat", "High natural sugar content — caution for diabetics", "May cause bloating if overconsumed"],
+    flavour: "Sweet",
+    nature: "Warm",
+    iconType: "longan",
+    color: "#8B5A2B"
+  },
 ];
-
 const recipes = [
   {
     id: 1,
