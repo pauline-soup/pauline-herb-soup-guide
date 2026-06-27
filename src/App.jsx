@@ -648,7 +648,9 @@ export default function App() {
                 </div>
                 <div style={{ marginTop: "0.6rem", fontSize: "0.72rem", color: "#4A7C59" }}>
                   {recipe.benefits.slice(0, 2).map((b, i) => <span key={i} style={{ marginRight: "0.95rem" }}>✓ {b}</span>)}
-                  <span style={{ color: "#C8A96E" }}>Tap for full recipe →</span>
+                </div>
+                <div style={{ marginTop: "0.7rem", textAlign: "center" }}>
+                  <span style={{ color: "#8B6914", fontWeight: "bold", fontSize: "0.95rem" }}>Tap for full recipe →</span>
                 </div>
               </div>
             ))}
