@@ -161,6 +161,16 @@ const HerbIcon = ({ type, size = 48 }) => {
         <circle cx="45" cy="72" r="8" fill="#F0E0C0" stroke="#C9A570" strokeWidth="1" />
       </svg>
     ),
+    qixuesoup: (
+      <svg viewBox="0 0 100 100" width={size} height={size}>
+        <ellipse cx="50" cy="65" rx="38" ry="22" fill="#F8EDE0" stroke="#D9B896" strokeWidth="1.5" />
+        <ellipse cx="38" cy="55" rx="14" ry="10" fill="#E8DCC4" stroke="#B8A578" strokeWidth="1" />
+        {[[58,52],[70,58],[62,68]].map(([x,y],i)=>(
+          <ellipse key={i} cx={x} cy={y} rx="6" ry="5" fill="#C8302A" stroke="#8B1F1A" strokeWidth="0.8" />
+        ))}
+        <path d="M30 45 Q40 35 48 45" fill="none" stroke="#A8895A" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    ),
   };
   return icons[type] || icons.astragalus;
 };
@@ -404,8 +414,27 @@ const recipes = [
     tag: "Immunity Boost",
     tagColor: "#7A6E4A"
   },
+  {
+    id: 5,
+    name: "补气活血汤 (Qi & Blood Tonic Soup)",
+    englishName: "Energizing Circulation Soup",
+    herbs: ["Sichuan Lovage Root (川芎) 10g", "Astragalus Root (黄芪) 20g", "Codonopsis Root (党参) 20g", "Red Dates (红枣) 6 pieces", "Dried Longan (龙眼肉) 15g"],
+    protein: "Pork bones or chicken",
+    instructions: [
+      "Rinse all herbs; soak Sichuan Lovage Root for 15 minutes.",
+      "Blanch protein in boiling water for 5 minutes, drain.",
+      "Add all ingredients to a pot with 1.8L water.",
+      "Bring to boil, then simmer on low heat for 1.5–2 hours.",
+      "Season with salt to taste and serve warm.",
+    ],
+    benefits: ["Boosts qi & energy", "Activates blood circulation", "Nourishes blood & calms the mind", "Relieves fatigue & poor circulation", "Supports cardiovascular health"],
+    servings: "4 pax",
+    cookTime: "2 hours",
+    iconType: "qixuesoup",
+    tag: "Energy & Circulation",
+    tagColor: "#8B4A2A"
+  },
 ];
-
 const categoryColors = {
   "Qi-Tonifying": "#4A7C59",
   "Blood & Yin-Nourishing": "#CC3300",
