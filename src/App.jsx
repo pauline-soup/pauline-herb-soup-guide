@@ -490,7 +490,7 @@ export default function App() {
         <div style={{ fontSize: "3rem", marginBottom: "0.5rem" }}>🍵</div>
         <div style={{ color: "#C8A96E", fontSize: "0.85rem", letterSpacing: "0.3em", textTransform: "uppercase", marginBottom: "0.5rem" }}>Pauline's Kitchen · Traditional Chinese Medicine</div>
         <h1 style={{ color: "#FAF7F2", fontSize: "2rem", fontWeight: "bold", margin: "0 0 0.5rem", lineHeight: 1.2 }}>
-          Pauline's Chinese Herb Soup Guide
+          Pauline's Chinese Herbal Soup Guide
         </h1>
         <div style={{ color: "#C8A96E", fontSize: "1.2rem", marginBottom: "0.25rem" }}>中药汤品指南</div>
         <p style={{ color: "#D4C4A8", fontSize: "0.85rem", margin: 0, opacity: 0.85 }}>
