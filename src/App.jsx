@@ -132,6 +132,14 @@ const HerbIcon = ({ type, size = 48 }) => {
         ))}
       </svg>
     ),
+      adenophora: (
+      <svg viewBox="0 0 100 100" width={size} height={size}>
+        <path d="M35 20 Q38 45 34 70 Q32 82 35 90" fill="none" stroke="#D4C8A8" strokeWidth="8" strokeLinecap="round" />
+        <path d="M55 15 Q58 40 54 65 Q52 78 55 88" fill="none" stroke="#DDDCB0" strokeWidth="7" strokeLinecap="round" />
+        <path d="M72 25 Q74 48 70 72 Q68 82 71 90" fill="none" stroke="#D4C8A8" strokeWidth="6" strokeLinecap="round" />
+        <path d="M30 20 Q38 18 55 15 Q65 13 74 25" fill="none" stroke="#B8AC80" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    ),
       ginseng: (
       <svg viewBox="0 0 100 100" width={size} height={size}>
         <path d="M50 12 Q56 30 53 45 Q58 55 50 60 Q42 55 47 45 Q44 30 50 12" fill="#E8D9B8" stroke="#B89860" strokeWidth="1.5" />
@@ -375,6 +383,19 @@ const herbs = [
     nature: "Neutral",
     iconType: "euryale",
     color: "#C9A870"
+  },
+  {
+    id: 14,
+    chineseName: "沙参",
+    name: "Adenophora Root (South Glehnia)",
+    pinyinName: "Shā Shēn",
+    category: "Yin-Nourishing",
+    benefits: ["Moistens lungs & relieves dry cough", "Nourishes stomach yin", "Clears deficiency heat", "Soothes the throat", "Supports post-illness recovery"],
+    risks: ["Avoid with cold-phlegm or chesty cough", "Not suitable for cold-deficient spleen/stomach", "Do not combine with Veratrum (藜芦)"],
+    flavour: "Sweet, slightly bitter",
+    nature: "Slightly cool",
+    iconType: "adenophora",
+    color: "#7A9E82"
   },
 ];
 const recipes = [
