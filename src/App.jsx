@@ -122,6 +122,16 @@ const HerbIcon = ({ type, size = 48 }) => {
         <path d="M50 25 Q55 15 62 18" fill="none" stroke="#5C3A1B" strokeWidth="2" strokeLinecap="round" />
       </svg>
     ),
+      euryale: (
+      <svg viewBox="0 0 100 100" width={size} height={size}>
+        {[[30,35],[55,28],[72,45],[25,60],[50,55],[75,65],[38,78],[62,75]].map(([x,y],i)=>(
+          <circle key={i} cx={x} cy={y} r="9" fill="#F0E8D0" stroke="#C9B896" strokeWidth="1.2" />
+        ))}
+        {[[30,35],[55,28],[72,45],[25,60],[50,55],[75,65],[38,78],[62,75]].map(([x,y],i)=>(
+          <circle key={i+"dot"} cx={x} cy={y} r="2" fill="#A89060" opacity="0.7" />
+        ))}
+      </svg>
+    ),
       ginseng: (
       <svg viewBox="0 0 100 100" width={size} height={size}>
         <path d="M50 12 Q56 30 53 45 Q58 55 50 60 Q42 55 47 45 Q44 30 50 12" fill="#E8D9B8" stroke="#B89860" strokeWidth="1.5" />
@@ -353,6 +363,19 @@ const herbs = [
       photo: longanPhoto,
     color: "#8B5A2B"
   },
+  {
+    id: 13,
+    chineseName: "芡实",
+    name: "Euryale Seeds (Fox Nut)",
+    pinyinName: "Qiàn Shí",
+    category: "Spleen & Kidney-Tonifying",
+    benefits: ["Strengthens spleen & stops diarrhoea", "Tonifies kidneys & astringes essence", "Reduces dampness", "Calms the mind", "Supports urinary health"],
+    risks: ["Avoid in constipation", "Not suitable for excess/bloating patterns", "Use cautiously during pregnancy in large doses"],
+    flavour: "Sweet, astringent",
+    nature: "Neutral",
+    iconType: "euryale",
+    color: "#C9A870"
+  },
 ];
 const recipes = [
   {
@@ -466,6 +489,7 @@ const categoryColors = {
   "Qi & Yin-Tonifying": "#6B7C4A",
   "Dampness-Resolving": "#7C6B4A",
   "Blood-Moving": "#8B4A2A",
+  "Spleen & Kidney-Tonifying": "#7A6E4A",
 };
 
 export default function App() {
