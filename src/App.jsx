@@ -5,6 +5,8 @@ import reddatesPhoto from "./assets/reddates.jpg";
 import solomonssealPhoto from "./assets/solomonsseal.jpg";
 import ginsengPhoto from "./assets/ginseng.jpg";
 import longanPhoto from "./assets/longan.jpg";
+import euryalePhoto from "./assets/euryale.jpg";
+import adenophoraPhoto from "./assets/adenophora.jpg";
 import angelicaPhoto from "./assets/angelica.jpg";
 import chineseyamPhoto from "./assets/chineseyam.jpg";
 import lotusseedsPhoto from "./assets/lotusseeds.jpg";
@@ -368,7 +370,7 @@ const herbs = [
     flavour: "Sweet",
     nature: "Warm",
     iconType: "longan",
-      photo: longanPhoto,
+    photo: longanPhoto,
     color: "#8B5A2B"
   },
   {
@@ -382,6 +384,7 @@ const herbs = [
     flavour: "Sweet, astringent",
     nature: "Neutral",
     iconType: "euryale",
+    photo: euryalePhoto,
     color: "#C9A870"
   },
   {
@@ -395,6 +398,7 @@ const herbs = [
     flavour: "Sweet, slightly bitter",
     nature: "Slightly cool",
     iconType: "adenophora",
+     photo: adenophoraPhoto, 
     color: "#7A9E82"
   },
 ];
